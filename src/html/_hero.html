@@ -1,17 +1,33 @@
 <section class="hero">
-    <div class="hero__title">
-        <h1 class="hero__header">Project 
-           <p>Home</p>
-        </h1>
+  <div class="container d-flex">
+        <div class="hero__info d-flex flex-column">
+            <h1 class="hero__header text-uppercase">Project 
+            <p>Home</p>
+            </h1>
 
-        <div class="hero__btn">
-            <button class="hero__btn-back">
-                
-            </button>
-            <button class="hero__btn-forward">
-
-            </button>
+            <div class="hero__btns d-flex justify-content-end align-items-center">
+                <button class="hero__btn-back">
+                    <img src="../img/arrow-back.svg" alt="btn-back">
+                </button>
+                <button class="hero__btn-forward">
+                    <img src="../img/arrow-forward.svg" alt="btn-forward">
+                </button>
+                <span class="hero__btn-line"></span>
+            </div>
+            <div class="hero__subtitle d-flex">
+                <span>01</span>
+                <img src="../img/divider.svg" alt="divider">
+                <span>02</span>
+            </div>
         </div>
-    </div>
-    <div class="hero__slider"></div>
+        <div class="hero__slider">
+            <div class="hero__slider-img">
+                <img src="../img/hero_img.png" alt="hero_image">
+                <button class="hero__slider-btn d-flex align-items-center">
+                    <span class="text-uppercase">Взглянуть</span>
+                    <img src="../img/arrow-forward.svg" alt="btn-forward">
+                </button>
+            </div>
+        </div>
+  </div>
 </section>

@@ -1,14 +1,15 @@
 @import "_global.scss";
 @import "_reset.scss";
 @import "_vars.scss";
+@import "_fonts.scss";
 
 
 .main {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .wrapper {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 .container {
@@ -16,13 +17,13 @@
   margin: 0 auto;
 }
 
-.header {
-  &__inner {
-    padding: 30px 0;
-  }
+.logo {
+  padding: 30px 0;
 }
 
 .menu {
+  padding: 40px 0;
+
   &__list {
     gap: 60px;
   }
@@ -138,6 +139,77 @@
     background-color: $primary-color;
     top: 83%;
     left: 0;
+  }
+}
+
+.hero{
+  &__info{
+    gap: 90px;
+    padding-bottom: 104px;
+    min-height: 100%;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  &__header{
+    font-size: 64px;
+    color: $primary-color;
+  }
+
+  &__header > p {
+    color: $secondary-color;
+  }
+
+  &__btns{
+    width: 100%;
+  }
+
+  &__btn-back,
+  &__btn-forward{
+    padding: 15px 13px;
+    cursor: pointer;
+    border: 1px solid $primary-gray;
+  }
+
+  &__btn-back{
+    background-color: $white;
+  }
+
+  &__btn-forward{
+    background-color: $light-gray;
+    margin-left: 23px;
+  }
+  &__btn-line{
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: $primary-gray;
+  }
+
+  &__subtitle{
+    gap: 26px;
+    font-size: 24px;
+    color: $primary-color;
+  }
+
+  &__slider-img{
+    position: relative;
+    width: 770px;
+  }
+
+  &__slider-btn{
+    gap: 12px;
+    position: absolute;
+    bottom: 0;
+    padding: 24px 50px;
+    border: none;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  &__slider-btn > span {
+    letter-spacing: 2.4px;
+    font-size: 12px;
   }
 }
 
