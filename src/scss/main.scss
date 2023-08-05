@@ -3,7 +3,9 @@
 @import "_vars.scss";
 @import "_fonts.scss";
 
-
+body {
+  font-family: $tt-hoves;;
+}
 .main {
   flex: 1 1 auto;
 }
@@ -267,6 +269,38 @@
 
 .fix-position {
   position: relative;
+}
+
+.main__goals {
+  &-headline {
+    font-size: 64px;
+    color: $primary-color;
+    font-weight: 200;
+  }
+
+  &-list{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr;
+    grid-column-gap: 187px;
+  }
+
+  &-item{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  &-number{
+    font-size: 200px;
+    color: $primary-gray;
+    font-weight: 900;
+  }
+
+  &-text {
+    font-size: 22px;
+    line-height: 36px;
+  }
 }
 
 
