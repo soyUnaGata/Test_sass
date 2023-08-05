@@ -213,5 +213,61 @@
   }
 }
 
+.about{
+  margin-top: 120px;
+  padding-bottom: 150px;
+
+  &__background{
+    height: 435px;
+    background-color: $light-gray-bg;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+  }
+
+  &__company{
+    display: grid;
+    grid-template-columns: 0.65fr 0.7fr 1fr;
+    grid-gap: 30px;
+    padding: 30px 70px 0 100px;
+  }
+
+  &__company-images{
+    gap: 30px;
+  }
+
+  &__company-header{
+    font-size: 64px;
+    color: $primary-color;
+    font-weight: 200;
+  }
+
+  &__company-description{
+    font-size: 16px;
+    margin-top: 23px;
+    line-height: 25px;
+  }
+
+  &__company-btn{
+    margin-top: 17px;
+    padding: 24px 64px;
+    background-color: $white;
+    gap: 17px;
+    border: none;
+    color: $secondary-color;
+    cursor: pointer;
+    line-height: 12px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.second-column {
+  padding-top: 30px;
+}
+
+.fix-position {
+  position: relative;
+}
+
 
 
