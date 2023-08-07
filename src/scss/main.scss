@@ -313,32 +313,69 @@ body {
     line-height: 64px;
   }
 
-  &__images-wrapper{
+  &__grid{
     margin-top: 60px;
-  }
-
-  &__images-centre{
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+  }
+  
+  .project-item{
+    height: 255px;
     position: relative;
+    overflow: hidden;
+
+
+    &__inner-wrapper{
+      width: 100%;
+      height: 100%;
+      padding: 0 79px;
+      padding-top: 48px;
+
+      & > h3{
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 64px;
+        color: $white;
+        max-width: 413px;
+        margin-bottom: 8px;
+      }
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      z-index: -1;
+    }
+
+    &:nth-child(1){ width: 570px; }
+    &:nth-child(2){ width: 570px; }
+    &:nth-child(3){ width: 270px; }
+    &:nth-child(4){ width: 470px; }
+    &:nth-child(5){ width: 370px; }
+
+    &:nth-child(1)::before{ background-image: url(../img/project_1.png); }
+    &:nth-child(2)::before{ background-image: url(../img/project_2.png); }
+    &:nth-child(3)::before{ background-image: url(../img/project_3.png); }
+    &:nth-child(4)::before{ background-image: url(../img/project_4.png); }
+    &:nth-child(5)::before{ background-image: url(../img/project_5.png); }
+
+    &:nth-child(1)::after{
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: $secondary-transperent;
+    }
   }
 
-  &__images-main-img{
-    position: relative;
-  }
 
-  &__images-about{
-    position: absolute;
-    gap: 8px;
-    padding: 48px 79px 0 79px;
-  }
-
-  &__images-about  > h3{
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 64px;
-    color: $white;
-    max-width: 413px;
-  }
 }
 
 .shadow {
