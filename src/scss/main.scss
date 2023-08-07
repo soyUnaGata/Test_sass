@@ -399,6 +399,16 @@ body {
 
 .all__projects-btn {
   margin-top: 30px;
+  background-color: $secondary-color;
+  cursor: pointer;
+  gap: 12px;
+  padding: 30px 39px;
+  color: $white;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 12px;
+  font-weight: 400;
 }
 
 
