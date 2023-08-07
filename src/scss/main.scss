@@ -411,4 +411,16 @@ body {
   font-weight: 400;
 }
 
+.contact__us {
+  margin-top: 120px;
+
+  &-form{
+    gap: 30px;
+  }
+
+  &-form-items{
+    gap: 10px;
+  }
+}
+
 
