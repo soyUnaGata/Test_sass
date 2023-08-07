@@ -1,32 +1,51 @@
 <section class="contact__us">
     <div class="container">
         <div class="contact__us-wrapper">
-            <h1 class="contact__us-title">Связаться с нами</h1>
+            <h3 class="contact__us-title">Связаться с нами</h3>
             <div class="contact__us-form d-flex">
-                <form class="contact__us-form-items d-flex flex-column" action="/submit" method="post">
-                    <label for="name"></label>
-                    <input class="contact__us-form-style" placeholder="Имя" type="text" id="name" name="name">
-            
-                    <label for="phone"></label>
-                    <input class="contact__us-form-style required" placeholder="Номер телефона*" type="tel" id="phone" name="phone" required>
-            
-                    <label for="email"></label>
-                    <input class="contact__us-form-style required" placeholder="E-mail" type="email" id="email" name="email" required>
-            
-                    <label for="question"></label>
-                    <input class="contact__us-form-style" placeholder="Интересующий товар/услуга" type="text" id="question" name="question">
-            
-                    <label for="message"></label>
-                    <textarea class="contact__us-form-style required" placeholder="Сообщение*" id="message" name="message" rows="4" required></textarea>
-
-                    <div class="check-privacy-policy">
-                        <input type="checkbox" name="checkbox" id="checkbox" class="checkbox" required>
-                        <label for=" checkbox">Отправляя заявку Вы соглашаетесь с политикой конфиденциальности
+                <form class="contact__us-form" action="/submit" method="post">
+                    <div class="contact__us-items d-flex flex-column">
+                        <label for="name">
+                            <input class="contact__us-form-style" placeholder="Имя" type="text" id="name" name="name">
                         </label>
+                       
+                
+                        <label class="required-field" for="phone">
+                            <input class="contact__us-form-style" type="tel" id="phone" name="phone" required>
+                            <div class="place_holder">Номер телефона<span>*</span></div>
+                        </label>
+                        
+                        <label class="required-field" for="email">
+                            <input class="contact__us-form-style" type="email" id="email" name="email" required>
+                            <div class="place_holder">Email<span>*</span></div>
+                        </label>
+                        
+                
+                        <label for="question">
+                            <input class="contact__us-form-style" placeholder="Интересующий товар/услуга" type="text" id="question" name="question">
+                        </label>
+                     
+
+                        <label class="required-field" for="message">
+                            <textarea class="contact__us-form-style" id="message" name="message" rows="4" required></textarea>
+                            <div class="place_holder">Сообщение<span>*</span></div>
+                        </label>
+                
+                        <div class="check-privacy-policy d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="checkbox" class="select__check" required>
+                            <label class="check__term" for="checkbox">
+                                <svg class="checked-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.17224 4.4305C1.7984 4.08233 1.1923 4.08233 0.818462 4.4305C0.444627 4.77866 0.444627 5.34315 0.818462 5.69132L4.20291 8.84337C4.57792 9.19263 5.18634 9.19137 5.55968 8.84056L13.1838 1.67661C13.556 1.3269 13.5533 0.762417 13.1778 0.415801C12.8023 0.0691853 12.1962 0.0716926 11.824 0.421401L4.87678 6.94933L2.17224 4.4305Z" fill="#333333"/></svg>
+                                <span>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span>
+                            </label>
+                        </div>
                     </div>
 
-                    <button type="submit" class="send-sumbit__form">Отправить</button>
+                    <button type="submit" class="send-sumbit__form d-flex align-items-center">
+                        Отправить
+                        <img src="../img/arrow-forward--white.svg" alt="">
+                    </button>
                 </form>
+                
 
                 <div class="contact__us-img">
                     <img src="../img/contact_us.png" alt="Contact Us">
