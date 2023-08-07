@@ -303,5 +303,65 @@ body {
   }
 }
 
+.projects {
+  margin-top: 128px;
+
+  &__title{
+    font-size: 64px;
+    font-weight: 100;
+    color: $primary-gray;
+    line-height: 64px;
+  }
+
+  &__images-wrapper{
+    margin-top: 60px;
+  }
+
+  &__images-centre{
+    gap: 30px;
+    position: relative;
+  }
+
+  &__images-main-img{
+    position: relative;
+  }
+
+  &__images-about{
+    position: absolute;
+    gap: 8px;
+    padding: 48px 79px 0 79px;
+  }
+
+  &__images-about  > h3{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 64px;
+    color: $white;
+    max-width: 413px;
+  }
+}
+
+.shadow {
+  background-color: $secondary-transperent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.details {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.second-line{
+  margin-top: 30px;
+}
+
+.all__projects-btn {
+  margin-top: 30px;
+}
 
 
