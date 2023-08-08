@@ -1,6 +1,6 @@
 @media screen and (max-width: 992px) {
     .container {
-        max-width: 930px;
+        max-width: calc(100vw - 62px);
         margin: 0 auto;
     }
 
@@ -16,6 +16,157 @@
     }
    }
 
+   .hero{
+    position: relative;
+
+    &__info{
+      gap: 63px;
+      padding-left: 20px;
+    }
+  
+    &__header{
+      font-size: 45px;
+    }
+  
+    &__subtitle{
+      gap: 18px;
+      font-size: 17px;
+    }
+    &__subtitle img {
+        width: 24px;
+        height: 24px;
+    }
+
+    &__slider-img{
+      width: 539px;
+    }
+  }
+
+  .about {
+    margin-top: 84px;
+    padding-bottom: 105px;
+
+    &__company-images{
+        display: none;
+    }
+
+    &__company{
+        display: flex;
+        padding: 0;
+    }
+
+    
+    &__company-header{
+        font-size: 45px;
+    }
+  }
+
+  .main__goals{
+    &-list {
+        display: flex;
+        flex-direction: column;
+        margin-top: 42px;
+    }
+    &-headline {
+        font-size: 45px;
+    }
+    &-number{
+        font-size: 140px;
+    }
+  }
+
+  .projects{
+    margin-top: 90px;
+
+    &__title{
+        font-size: 45px;
+    }
+    &__grid{
+        margin-top: 46px;
+    }
+
+    .project-item{
+        &:not(:nth-child(1)){
+            display: none;
+        }
+        &:nth-child(1){
+            width: 100%;
+        }
+        &:nth-child(1)::before{
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &__inner-wrapper > h3{
+            font-size: 42px;
+        }
+    
+    }
+    .project__btn{
+        justify-content: flex-start;
+    }
+  }
+
+  .contact__us {
+    margin-top: 90px;
+
+    &-form{
+        padding-bottom: 67px;
+        width: 100%;
+    }    
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title{
+        font-size: 45px;
+    }
+    &-items{
+        gap: 15px;
+        width: 100%;
+    }
+    &-img{
+        display: none;
+    }
+  }
+
+  .send-sumbit__form{
+    margin-top: 26px;
+  }
+
+  .footer{
+    &__container{
+        gap: 69px;
+    }
+    &__inner{
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__menu,
+    &__info,
+    &__social{
+      gap: 18px;
+    }
+    &__menu__list{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__info{
+        padding: 0;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    &__info-list{
+        gap: 21px;
+        flex-wrap: wrap;
+    }
+    &__social{
+        padding-left: 0;
+        flex-wrap: wrap;
+    }
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -23,10 +174,10 @@
         overflow: hidden;
     }
     .container {
-        max-width: 690px;
+        max-width: calc(100vw - 32px);
         margin: 0 auto;
     }
-
+    
     .header {
         position: fixed;
         width: 100%;
@@ -41,7 +192,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: blueviolet;
+            background-color: $white;
             z-index: 3;
         }
 
@@ -109,9 +260,10 @@
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: aqua;
+        background-color: $white;
         padding: 150px 0 0 0;
         transition: all 0.3s ease 0s;
+        font-size: 35px;
 
         &.active{
             top: 0;
@@ -119,11 +271,161 @@
         &__list{
             position: relative;
             z-index: 2;
-            display: block;
+            flex-direction: column;
+            align-items: center;
         }
 
         &__list li {
             margin: 0 0 20px 20px;
         }
+    }
+
+    .hero{
+        position: relative;
+        margin-top: 90px;
+        &__info{
+            display: grid;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 71px;
+            grid-template-areas:
+                "h1 h1 h1 pages"
+                ". . . btns";
+            gap: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        &__header{
+            font-size: 64px;
+            grid-area: h1;
+            padding: 16px;
+        }
+
+        &__btns {
+            width: 100%;
+            grid-area: btns;
+            gap: 0;
+        }
+        &__btn-back,
+        &__btn-forward {
+            width: 50%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            margin: 0;
+        }
+        &__btn-line{
+            display: none;
+        }
+        &__subtitle{
+            background-color: #fff;
+            height: 71px;
+            grid-area: pages;
+            justify-content: center;
+            align-items: center;
+        }
+        &__slider-img{
+            width: 100%;
+        }
+        &__slider-btn{
+            z-index: 3;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: calc(100vw - 32px);
+        margin: 0 auto;
+    }
+
+    .hero {
+        &__header{
+        font-size: 40px;
+        }
+        &__btn-back,
+        &__btn-forward{
+            width: auto;
+            height: auto;
+        }
+        &__slider-btn{
+            padding: 20px 30px;
+        }
+    }  
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px){
+    .container {
+        max-width: calc(100vw - 26px);
+        margin: 0 auto;
+    }
+    .hero {
+        &__header{
+        font-size: 30px;
+        }
+        &__subtitle{
+            gap: 3px;
+        }
+        &__btns{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &__btn-forward {
+            margin: 0;
+        }
+        &__slider-btn{
+            padding: 20px 30px;
+        }
+    } 
+
+    .about {   
+        &__company-header{
+            font-size: 30px;
+        }
+    }
+
+    .main__goals{
+        &-headline {
+            font-size: 30px;
+        }
+        &-number{
+            font-size: 100px;
+        }
+        &-text{
+            font-size: 14px;
+        }
+    }
+
+    .projects{
+        &__title{
+            font-size: 30px;
+        }
+
+        .project-item{
+            &__inner-wrapper {
+                padding: 20px;
+            }
+            &__inner-wrapper > h3{
+                font-size: 30px;
+            }
+        }
+        
+    }
+
+    .contact__us {
+        &-title{
+            font-size: 30px;
+        }
+    }
+
+    .footer__copyright{
+        padding: 30px;
     }
 }
