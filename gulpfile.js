@@ -1,6 +1,7 @@
 const { src, dest, watch, series, task } = require("gulp");
 const sass = require("gulp-sass")(require("node-sass"));
 const server = require("browser-sync").create();
+const concat = require("gulp-concat");
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin");
 const fileinclude = require("gulp-file-include");
@@ -37,6 +38,12 @@ function images() {
     .pipe(dest("dist/img"));
 }
 
+function scripts() {
+  return src("src/js/**/*")
+    .pipe(concat("main.js"))
+    .pipe(dest("dist/js"))
+}
+
 function html() {
   return src("src/[^_]*.html")
     .pipe(
@@ -55,6 +62,7 @@ async function reload() {
 async function buildAndReload() {
   images();
   styles();
+  scripts();
   html();
   reload();
 }
@@ -62,6 +70,7 @@ async function buildAndReload() {
 task("clean", clean);
 task("styles:build", styles);
 task("images:build", images);
+task("scripts:build", scripts)
 task("html:build", html);
 
 exports.watch = async function () {
