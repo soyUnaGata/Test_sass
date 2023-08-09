@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass app/scss/main.scss app/css/style.css"
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "keywords": [],
   "author": "",

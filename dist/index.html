@@ -13,6 +13,9 @@
             <a class="logo" href="">
                 <img src="img/logo.png" alt="logo">
             </a>
+            <div class="header__burger">
+                <span></span>
+            </div>
             <nav class="menu">
                 <ul class="menu__list d-flex">
                     <li class="menu__list-item">
@@ -38,7 +41,8 @@
 
     <div class="wrapper d-flex flex-column">
         <main class="main">
-            <section class="hero">
+            <div class="container">
+                <section class="hero">
   <div class="container d-flex">
         <div class="hero__info d-flex flex-column">
             <h1 class="hero__header text-uppercase">Project 
@@ -55,14 +59,15 @@
                 <span class="hero__btn-line"></span>
             </div>
             <div class="hero__subtitle d-flex">
-                <span>01</span>
+                <span id="slider-number">01</span>
                 <img src="../img/divider.svg" alt="divider">
-                <span>02</span>
+                <span id="total-sliders">02</span>
             </div>
         </div>
         <div class="hero__slider">
             <div class="hero__slider-img">
-                <img src="../img/hero_img.png" alt="hero_image">
+                <img class="slider slider--active" src="../img/hero_img.png" alt="hero_image">
+                <img class="slider" src="../img/hero_img_2.png" alt="hero_image">
                 <button class="hero__slider-btn d-flex align-items-center">
                     <span class="text-uppercase">Взглянуть</span>
                     <img src="../img/arrow-forward.svg" alt="btn-forward">
@@ -71,9 +76,8 @@
         </div>
   </div>
 </section>
-            <section class="about">
+                <section class="about">
   <div class="container fix-position">
-    <div class="about__background"></div>
     <div class="about__company">
         <div class="about__company-images d-flex flex-column first-column">
             <img src="../img/about_img_1.png" alt="">
@@ -83,7 +87,7 @@
             <img src="../img/about_img_3.png" alt="">
         </div>
         <div class="about__company-summary">
-            <h3 class="about__company-header">О компании</h3>
+            <h1 class="about__company-header">О компании</h1>
             <p class="about__company-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             <button class="about__company-btn d-flex align-items-center">
                 <span class="text-uppercase">Читать</span>
@@ -93,9 +97,9 @@
     </div>
   </div>
 </section>
-            <section class="main__goals">
+                <section class="main__goals">
     <div class="container">
-        <h3 class="main__goals-headline">Основные задачи</h3>
+        <h1 class="main__goals-headline">Основные задачи</h1>
         <div class="main__goals-list">
             <div class="main__goals-item">
                 <p class="main__goals-number">1</p>
@@ -108,6 +112,91 @@
         </div>
     </div>
 </section>
+                <section class="projects">
+    <div class="container">
+        <h3 class="projects__title">Наши проекты</h3>
+        <div class="projects__grid">
+            <div class="project-item d-flex flex-column" data-img="../img/project_1.png">
+                <div class="project-item__inner-wrapper">
+                    <h3 class="text-uppercase">Досуговый Центр</h3>
+                    <button class="details d-flex align-items-center">
+                        <span  class="text-uppercase">Подробнее</span>
+                        <img src="../img/arrow-forward--white.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="project-item" data-img="../img/project_2.png"></div>
+            <div class="project-item" data-img="../img/project_3.png"></div>
+            <div class="project-item" data-img="../img/project_4.png"></div>
+            <div class="project-item" data-img="../img/project_5.png"></div>
+        </div>
+        <div class="project__btn d-flex justify-content-end">
+            <button class="all__projects-btn d-flex align-items-center">
+                <span  class="text-uppercase">Все проекты</span>
+                <img src="../img/arrow-forward--white.svg" alt="">
+            </button>  
+        </div>
+      
+    </div>
+</section>
+                <section class="contact__us">
+    <div class="container">
+        <div class="contact__us-wrapper">
+            <h3 class="contact__us-title">Связаться с нами</h3>
+            <div class="contact__us-form d-flex">
+                <form class="contact__us-form" action="/submit" method="post">
+                    <div class="contact__us-items d-flex flex-column">
+                        <label for="name">
+                            <input class="contact__us-form-style" placeholder="Имя" type="text" id="name" name="name">
+                        </label>
+                       
+                
+                        <label class="required-field" for="phone">
+                            <input class="contact__us-form-style" type="tel" id="phone" name="phone" required>
+                            <div class="place_holder">Номер телефона<span>*</span></div>
+                        </label>
+                        
+                        <label class="required-field" for="email">
+                            <input class="contact__us-form-style" type="email" id="email" name="email" required>
+                            <div class="place_holder">Email<span>*</span></div>
+                        </label>
+                        
+                
+                        <label for="question">
+                            <input class="contact__us-form-style" placeholder="Интересующий товар/услуга" type="text" id="question" name="question">
+                        </label>
+                     
+
+                        <label class="required-field" for="message">
+                            <textarea class="contact__us-form-style" id="message" name="message" rows="4" required></textarea>
+                            <div class="place_holder">Сообщение<span>*</span></div>
+                        </label>
+                
+                        <div class="check-privacy-policy d-flex align-items-center">
+                            <input type="checkbox" name="checkbox" id="checkbox" class="select__check" required>
+                            <label class="check__term" for="checkbox">
+                                <svg class="checked-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.17224 4.4305C1.7984 4.08233 1.1923 4.08233 0.818462 4.4305C0.444627 4.77866 0.444627 5.34315 0.818462 5.69132L4.20291 8.84337C4.57792 9.19263 5.18634 9.19137 5.55968 8.84056L13.1838 1.67661C13.556 1.3269 13.5533 0.762417 13.1778 0.415801C12.8023 0.0691853 12.1962 0.0716926 11.824 0.421401L4.87678 6.94933L2.17224 4.4305Z" fill="#333333"/></svg>
+                                <span>Отправляя заявку Вы соглашаетесь с политикой конфиденциальности</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="send-sumbit__form d-flex align-items-center">
+                        Отправить
+                        <img src="../img/arrow-forward--white.svg" alt="">
+                    </button>
+                </form>
+                
+
+                <div class="contact__us-img">
+                    <img src="../img/contact_us.png" alt="Contact Us">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            </div>
+          
 
         </main>
     </div>
@@ -173,5 +262,7 @@
     </div>
     <div class="footer__copyright">© 2019 Digital Project. Все права защищены.</div>
 </footer>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
